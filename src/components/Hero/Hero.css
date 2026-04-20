@@ -1,0 +1,55 @@
+.hero {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.3), transparent),
+    url("../../assets/casalfundo.jpg");
+
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+
+  min-height: 650px;
+  padding: 140px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 26px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 22px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.hero-button {
+  margin-top:20px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}

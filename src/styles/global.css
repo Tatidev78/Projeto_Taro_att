@@ -1,0 +1,25 @@
+body {
+  @apply bg-gradient-to-b from-purple-50 to-white;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.btn-primary {
+  @apply bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}

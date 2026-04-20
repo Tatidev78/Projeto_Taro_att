@@ -1,0 +1,43 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 8px 20px; /* reduzido para tirar “altura excessiva” */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  height: 90px;
+  object-fit: contain;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #7c3aed;
+}
