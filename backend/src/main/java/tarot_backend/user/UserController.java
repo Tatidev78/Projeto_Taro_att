@@ -26,7 +26,7 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    // 🔥 LOGIN
+    // LOGIN
     @PostMapping("/login")
     public Map<String, Object> login(@RequestBody User user) {
 

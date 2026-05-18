@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./Login.css";
 
@@ -10,12 +9,12 @@ export default function Login() {
 
   const [form, setForm] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({ ...prev, [name]: value }));
   }
 
   async function handleSubmit(e) {
@@ -30,40 +29,41 @@ export default function Login() {
       const response = await fetch("http://localhost:8080/users/login", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(form)
+        body: JSON.stringify(form),
       });
+
+      if (!response.ok) {
+        throw new Error("Erro no servidor");
+      }
 
       const data = await response.json();
 
       if (!data || data.success === false) {
-      alert(data.message || "Usuário não encontrado ou senha inválida");
-      return;
+        alert(data.message || "Usuário não encontrado ou senha inválida");
+        return;
+      }
+
+      login({
+        name: data.name,
+        email: data.email,
+      });
+
+      alert(`Bem-vindo, ${data.name}!`);
+      navigate("/dashboard");
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao conectar com o servidor");
     }
-
-    login({
-      name: data.name,
-      email: data.email
-    });
-
-    alert(`Bem-vindo, ${data.name}!`);
-    navigate("/dashboard");
-
-  } catch (error) {
-    console.error(error);
-    alert("Erro ao conectar com o servidor");
   }
-}
 
   return (
     <section className="login">
       <div className="login-container">
-
         <h2>Entrar</h2>
 
         <form className="login-form" onSubmit={handleSubmit}>
-
           <input
             name="email"
             value={form.email}
@@ -79,17 +79,13 @@ export default function Login() {
             onChange={handleChange}
           />
 
-          <button type="submit">
-            Entrar
-          </button>
-
+          <button type="submit">Entrar</button>
         </form>
 
         <p className="register-link">
-        Não tem conta? 
-        <Link to="/register">Cadastre-se</Link>
-      </p>
-
+          Não tem conta?
+          <Link to="/register">Cadastre-se</Link>
+        </p>
       </div>
     </section>
   );

@@ -24,16 +24,26 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      // 🔥 CONEXÃO FRONT → BACKEND
+        const payload = {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+        phone: form.phone,
+        birthDate: form.birthDate,
+        city: form.city,
+        time: form.time,
+         };
+
+      // CONEXÃO FRONT → BACKEND
       const response = await fetch("http://localhost:8080/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(form)
+        body: JSON.stringify(payload),
       });
 
-      // 🔥 valida se deu certo no backend
+      // valida se deu certo no backend
       if (!response.ok) {
         throw new Error("Erro ao criar conta no backend");
       }
