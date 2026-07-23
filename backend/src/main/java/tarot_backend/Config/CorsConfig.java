@@ -1,4 +1,4 @@
-package tarot_backend.Config;
+package tarot_backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

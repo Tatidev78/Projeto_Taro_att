@@ -36,3 +36,12 @@
   color: white;
   cursor: pointer;
 }
+
+.register-link-C {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.register-link-C:hover {
+  color: #0056b3;
+}
