@@ -213,13 +213,13 @@ Before running the backend:
 
 ## 🏠 Home Page
 
-![Home Page](assets/home.png)
+![Home Page](src/assets/home.png)
 
 ---
 
 ## 🔐 Login Page
 
-![Login Page](assets/login.png)
+![Login Page](src/assets/login.png)
 
 ---
 
