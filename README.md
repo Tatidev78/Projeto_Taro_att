@@ -1,70 +1,288 @@
-# Getting Started with Create React App
+# 🔮 Taro Online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Full Stack web application for online tarot consultations, developed with **React**, **Java 17**, **Spring Boot**, **Spring Security**, and **PostgreSQL**.
 
-## Available Scripts
+This project simulates a real-world online booking platform where users can create an account, securely log in, schedule tarot consultations, and manage their appointments through an intuitive and responsive interface.
 
-In the project directory, you can run:
+The main goal of this project is to strengthen Full Stack development skills by integrating a modern React frontend with a secure Java Spring Boot backend following RESTful architecture.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 🚀 Project Status
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **Currently under active development**
 
-### `npm test`
+### ✅ Completed
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Responsive Home Page
+* User Registration
+* User Authentication
+* Login Page
+* Frontend and Backend integration
+* REST API development
+* PostgreSQL database integration
+* Spring Security configuration
 
-### `npm run build`
+### 🚧 In Progress
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* User Dashboard
+* Appointment Scheduling
+* Appointment History
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📌 Planned Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Online payments
+* Email notifications
+* User profile management
+* Consultation history
+* Tarot card history
+* Admin dashboard
+* AI-assisted tarot interpretations
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# ✨ Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authentication
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* User registration
+* Secure login
+* Authentication flow
+* Protected application access
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Appointment Management
 
-## Learn More
+* Schedule tarot consultations *(in development)*
+* Manage appointments *(in development)*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## User Experience
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Responsive design
+* Modern interface
+* Easy navigation
+* Client-side validation
+* Server-side validation
 
-### Code Splitting
+## Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* RESTful API
+* Secure endpoints
+* Database persistence
+* Spring Security integration
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# 🛠️ Tech Stack
 
-### Making a Progressive Web App
+## Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* React 19
+* JavaScript (ES6+)
+* React Router DOM
+* HTML5
+* CSS3
+* Tailwind CSS
 
-### Advanced Configuration
+## Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Java 17
+* Spring Boot
+* Spring Security
+* Spring Data JPA
+* Maven
 
-### Deployment
+## Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* PostgreSQL
 
-### `npm run build` fails to minify
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Jest
+* React Testing Library
+
+---
+
+# 🏗️ Architecture
+
+```text
+Frontend (React)
+        │
+        │ HTTP Requests
+        ▼
+REST API (Spring Boot)
+        │
+        ▼
+Spring Security
+        │
+        ▼
+Spring Data JPA
+        │
+        ▼
+PostgreSQL
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+Projeto_Taro_att
+│
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── context
+│   │   ├── data
+│   │   ├── pages
+│   │   ├── services
+│   │   └── routes
+│   └── package.json
+│
+├── backend
+│   ├── src
+│   ├── pom.xml
+│   └── ...
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Getting Started
+
+## Clone the repository
+
+```bash
+git clone https://github.com/Tatidev78/Projeto_Taro_att.git
+```
+
+---
+
+## Frontend
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm start
+```
+
+Application URL
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Backend
+
+Run the Spring Boot application
+
+```bash
+mvn spring-boot:run
+```
+
+API URL
+
+```text
+http://localhost:8080
+```
+
+---
+
+# 🗄️ Database
+
+The application uses **PostgreSQL**.
+
+Before running the backend:
+
+* Create a PostgreSQL database.
+* Configure the database credentials in the Spring Boot configuration file.
+* Start the backend application.
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+![Home Page](assets/home.png)
+
+---
+
+## 🔐 Login Page
+
+![Login Page](assets/login.png)
+
+---
+
+## 🚧 Coming Soon
+
+The following screens are currently being developed:
+
+* User Dashboard
+* Appointment Scheduling
+* Appointment History
+
+Screenshots will be added as development progresses.
+
+---
+
+# 💡 What I Learned
+
+This project helped me improve my knowledge of:
+
+* Full Stack application development
+* React component architecture
+* React Router
+* Context API
+* REST API development
+* Spring Boot
+* Spring Security
+* Spring Data JPA
+* PostgreSQL
+* Client and server communication
+* Authentication flow
+* Responsive web development
+* Project organization and scalability
+
+---
+
+# 🎯 Future Improvements
+
+* Payment gateway integration
+* Email notifications
+* Password recovery
+* Profile editing
+* Appointment cancellation
+* Consultation history
+* Admin panel
+* AI-powered tarot interpretations
+* Deployment to cloud services
+
+---
+
+# 👩‍💻 Author
+
+**Tatiana Coimbra**
+
+📌 GitHub
+https://github.com/Tatidev78
+
+📌 LinkedIn
+https://www.linkedin.com/in/tatiana-coimbra-dev/
+
+---
+
+# 📄 License
+
+This project was developed for educational purposes and is part of my Full Stack Developer portfolio.
+
+Feel free to explore the code, suggest improvements, or contribute to the project.
